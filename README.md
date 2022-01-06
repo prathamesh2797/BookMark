@@ -24,6 +24,9 @@ This app uses the following features:
 
 User needs to enter his/her name, 10 digit mobile number and select Book from dropdown and submit button
 
+![Book Dropdown](https://user-images.githubusercontent.com/84138868/148374177-96767565-2dd0-4505-a665-d3f9848af3ad.jpg)
+
+
 **Recycler View Main Activity:** The saved item details will be loaded in the main activity in a card view format.
 
 ![main activity recycler view](https://user-images.githubusercontent.com/84138868/148373914-99c0e0b0-0adc-4fa6-8a49-a30fa6505a7e.jpg)
