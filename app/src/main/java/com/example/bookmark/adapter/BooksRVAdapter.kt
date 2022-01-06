@@ -3,10 +3,9 @@ package com.example.bookmark
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.AsyncListDiffer
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookmark.databinding.BooksItemBinding
+import com.example.bookmark.models.Books
 
 class BooksRVAdapter(
     private val context: Context,

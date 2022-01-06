@@ -5,6 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:background="@color/eerie_black"
     tools:context=".AddEditBook">
 
     <EditText
@@ -12,10 +15,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_margin="5dp"
         android:hint="Enter Your Name"
         android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:textColor="@color/light_grey"
+        android:textColorHint="@color/light_grey"
         android:textSize="18sp"
+        android:background="@drawable/edt_text_shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -23,34 +29,55 @@
         android:id="@+id/et_mobileNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_text_shape"
         android:hint="Enter Mobile Number"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textColorHint="@color/light_grey"
+        android:textColor="@color/light_grey"
         android:textSize="18sp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_userName"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_userName" />
 
 
-    <EditText
+   <!-- <EditText
         android:id="@+id/et_bookName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_text_shape"
+        android:padding="10dp"
+        android:textColorHint="@color/light_grey"
+        android:textColor="@color/light_grey"
         android:hint="Enter Book Name"
         android:textSize="18sp"
-        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_mobileNumber"/>-->
+
+
+    <Spinner
+        android:id="@+id/et_bookName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/Books"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_text_shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_mobileNumber"/>
+
 
     <Button
         android:id="@+id/btn_submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/et_bookName"
-        android:layout_margin="5dp"
         android:text="Submit"
+        android:padding="10dp"
         android:layout_marginTop="5dp"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"

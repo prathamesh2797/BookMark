@@ -9,6 +9,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.bookmark.databinding.ActivityMainBinding
+import com.example.bookmark.models.Books
+import com.example.bookmark.viewmodel.BooksViewModel
 
 class MainActivity : AppCompatActivity(), BookClickedInterface, BookClickedDeleteInterface {
     private lateinit var binding: ActivityMainBinding
@@ -36,7 +38,7 @@ class MainActivity : AppCompatActivity(), BookClickedInterface, BookClickedDelet
         binding.faButton.setOnClickListener {
             val intent = Intent(this, AddEditBook::class.java)
             startActivity(intent)
-            this.finish()
+
         }
     }
 
@@ -56,9 +58,10 @@ class MainActivity : AppCompatActivity(), BookClickedInterface, BookClickedDelet
         intent.putExtra("mobileNumber", books.mobileNo)
         intent.putExtra("bookName", books.bookName)
         intent.putExtra("bookID", books.id)
+        intent.putExtra("selectedBookId", books.selectedBookId)
 
         startActivity(intent)
-        this.finish()
+
 
     }
 

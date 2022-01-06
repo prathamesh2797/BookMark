@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BookMark</string>
+    
+    <string-array name="Books">
+        <item>Book1</item>
+        <item>Book2</item>
+        <item>Book3</item>
+    </string-array>
 </resources>

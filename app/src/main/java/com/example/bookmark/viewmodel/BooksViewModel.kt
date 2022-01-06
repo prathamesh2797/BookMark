@@ -1,9 +1,12 @@
-package com.example.bookmark
+package com.example.bookmark.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.bookmark.database.BookDatabase
+import com.example.bookmark.models.Books
+import com.example.bookmark.repository.BookRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -13,7 +16,7 @@ class BooksViewModel(application: Application): AndroidViewModel(application) {
     private val repository: BookRepository
 
     init {
-        val dao =BookDatabase.getDatabase(application).getBookDao()
+        val dao = BookDatabase.getDatabase(application).getBookDao()
         repository = BookRepository(dao)
         allBooks = repository.allBooks
     }

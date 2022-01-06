@@ -1,6 +1,8 @@
-package com.example.bookmark
+package com.example.bookmark.repository
 
 import androidx.lifecycle.LiveData
+import com.example.bookmark.models.Books
+import com.example.bookmark.database.BooksDao
 
 class BookRepository(private val booksDao: BooksDao) {
 

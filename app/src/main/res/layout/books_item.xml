@@ -1,58 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#F0F0F0"
-    android:layout_margin="5dp"
-    android:padding="5dp"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:paddingBottom="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="@dimen/cardview_default_elevation"
+    app:cardBackgroundColor="@color/sonic_silver"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/tv_userName"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your Name"
-        android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:padding="5dp"
-        android:layout_margin="5dp"/>
+        android:layout_margin="2dp"
+        >
 
-    <TextView
-        android:id="@+id/tv_mobileNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="+91 7979797979"
-        app:layout_constraintEnd_toStartOf="@+id/iv_delete"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_userName"
-        android:textSize="18sp"
-        android:padding="5dp"
-        android:layout_margin="5dp"/>
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/tmp_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_person_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_margin="5dp"/>
 
-    <TextView
-        android:id="@+id/tv_bookName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Book Name"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_mobileNumber"
-        android:textSize="18sp"
-        android:padding="5dp"
-        android:layout_margin="5dp"/>
+        <TextView
+            android:id="@+id/tv_textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Name: "
+            android:textSize="18sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"            android:layout_margin="5dp"
+            android:textColor="@color/light_grey"
+            app:layout_constraintLeft_toRightOf="@+id/tmp_img"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/iv_delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_delete_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_margin="5dp"
-        android:padding="5dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tv_userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Name"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_textView1"
+            android:padding="5dp"
+            android:textColor="@color/light_grey"
+            android:layout_margin="5dp"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/tmp_img_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_call_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_textView1"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_margin="5dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Mobile No: "
+            android:textSize="18sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"            android:layout_margin="5dp"
+            android:textColor="@color/light_grey"
+            app:layout_constraintLeft_toRightOf="@+id/tmp_img_1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_textView1" />
+
+        <TextView
+            android:id="@+id/tv_mobileNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_grey"
+            android:text="+91 7979797979"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/tv_textView2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_userName"
+            android:textSize="18sp"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/tmp_img_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_menu_book_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_textView2"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/tv_textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Book Name: "
+            android:textSize="18sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"            android:layout_margin="5dp"
+            android:textColor="@color/light_grey"
+           app:layout_constraintLeft_toRightOf="@+id/tmp_img_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_textView2" />
+
+
+        <TextView
+            android:id="@+id/tv_bookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Name"
+            app:layout_constraintLeft_toRightOf="@+id/tv_textView3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobileNumber"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/light_grey"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_delete_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="Book Name: "
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@+id/tmp_img_2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_textView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

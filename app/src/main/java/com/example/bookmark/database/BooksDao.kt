@@ -1,7 +1,8 @@
-package com.example.bookmark
+package com.example.bookmark.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.bookmark.models.Books
 
 @Dao
 interface BooksDao {
@@ -15,6 +16,6 @@ interface BooksDao {
     @Update
     suspend fun update(books: Books)
 
-    @Query("Select * from booksTable order by id asc")
+    @Query("Select * from booksTable order by id desc")
     fun getAllBooks(): LiveData<List<Books>>
 }
