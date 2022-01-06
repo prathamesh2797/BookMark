@@ -1,14 +1,14 @@
 # BookMark
 An android app developed in Kotlin language that keeps record of which books are issued to whom. User needs to enter his Name, Mobile Number and Selected Book and save these details.
 
-##Summary
+## Summary
 This app uses the following features:
 1. MVVM architecture(Model View ViewModel)
 2. Kotlin Language 
 3. Room Database for storing data
 4. Splash Screen
 
-##Working Of Application
+## Working Of Application
 
 **Splash Screen:** User launches the app > Splash screen will be loaded
 
