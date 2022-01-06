@@ -13,6 +13,7 @@ This app uses the following features:
 **Splash Screen:** User launches the app > Splash screen will be loaded
 
 **Main Activity:** User is in Main Activity with one floating action button.
+![Main Activity](https://user-images.githubusercontent.com/84138868/148373489-8c7ca7ef-4c70-4923-af15-4aa625455619.jpg)
 
 **Add /Edit Activity:** User clicks on the Add icon and navigates to new activity 
 User needs to enter his/her name, 10 digit mobile number and select Book from dropdown and submit button
